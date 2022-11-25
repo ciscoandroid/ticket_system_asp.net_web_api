@@ -3,3 +3,6 @@
 ################################################################################
 
 /.vs
+/techbidia_ticket_system/.vs/techbidia_ticket_system
+/techbidia_ticket_system/techbidia_ticket_system/bin/Debug/netcoreapp3.1
+/techbidia_ticket_system/techbidia_ticket_system/obj
