@@ -1,0 +1,40 @@
+﻿@page
+@model titcket_system.Pages.Clients.IndexModel
+@{
+}
+
+<br />
+<h2>List of User Information</h2>
+<a class='btn btn-primary btn-sm' href="/Users/Create">New User</a>
+<br />
+<table  class="table" style="border:solid">
+    <thead>
+        <tr>
+            <th style="width: 10%;">User ID</th>
+            <th style="width: 15%;">Full Name</th>
+            <th style="width: 15%;">Email</th>
+            <th style="width: 15%;">Current Address</th>
+            <th style="width: 10%;">Phone Number</th>
+            <th style="width: 15%;">Create At</th>
+            <th style="width: 10%;">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ListUsers)
+        {
+            <tr>
+                <td>@item.user_id</td>
+                <td>@item.fullname</td>
+                <td>@item.email</td>
+                <td>@item.address</td>
+                <td>@item.phones</td>
+                <td>@item.create_at</td>
+
+                <td>
+                    <a class="btn btn-primary btn-sm" href="/Users/Edit?user_id=@item.user_id">Edit</a>
+                    <a class="btn btn-primary btn-sm" href="/Users/Delete?user_id=@item.user_id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
